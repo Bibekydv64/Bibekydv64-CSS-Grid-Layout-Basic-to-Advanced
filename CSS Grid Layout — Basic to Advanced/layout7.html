@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>layout-practices</title>
+    <style>
+        .container{
+            height: 1020px;
+            width: 1440px;
+            background-color: aliceblue;
+            display: grid;
+            grid-template-columns: 6fr 2fr;
+            grid-template-rows: 3fr 4fr;
+            gap: 3px;
+        }
+        .box{
+            color: rgb(75, 188, 188);
+            font-size: 20px;
+            font-weight: bolder;
+        }
+
+        .ox1{
+            background: rgb(29, 50, 50);
+        }
+
+        .ox2{
+            background-color:  rgb(8, 50, 83);
+        }
+
+        .ox3{
+            background-color:  rgb(78, 103, 72);
+            grid-row: -3/-1;
+            grid-column: 2/3;
+        }
+        @media screen and (width > 1032px){
+            .container{
+            height: 1020px;
+            width: 1440px;
+            background-color: aliceblue;
+            display: grid;
+            grid-template-columns: 6fr 2fr;
+            grid-template-rows: 3fr 4fr;
+            gap: 3px;
+        }
+        .ox3{
+        background-color:  rgb(78, 103, 72);
+        grid-row: -3/-1;
+        grid-column: 2/3;
+        }
+    }
+
+        @media screen and (width < 1200px)  and (width > 450px){
+            .container{
+            height: 1020px;
+            width: 1440px;
+            background-color: aliceblue;
+            display: grid;
+            grid-template-columns: 6fr 2fr;
+            grid-template-rows: 3fr 4fr;
+            gap: 3px;
+        }
+        .ox3{
+        background-color:  rgb(78, 103, 72);
+        grid-row: -3/-1;
+        grid-column: 2/3;
+        }
+    }
+    
+
+        @media screen and (width < 450px) {
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box ox1">box1</div>
+        <div class="box ox2">box2</div>
+        <div class="box ox3">box3</div>
+    </div>
+</body>
+</html>
